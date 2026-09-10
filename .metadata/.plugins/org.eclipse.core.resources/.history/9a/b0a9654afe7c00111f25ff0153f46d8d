@@ -1,0 +1,28 @@
+package com.rays.io;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class ReadAndWriteBinaryFile {
+public static void main(String[] args) throws Exception {
+	String source = "D:\\IO - Copy\\KingKong.jpg";
+	String target = "D:\\IO - Copy\\KingKong-copy.jpg";
+	FileInputStream in = new FileInputStream(source);  // read binary
+	FileOutputStream out = new FileOutputStream(target);  //write bianary
+	
+	int i = in.read();
+	
+	while(i != -1);
+	
+	System.out.println(i);
+	
+	out.write(i);
+	
+	i = in.read();
+	
+	in.close();
+	out.close();
+	System.out.println("Sucessfullly.........");
+}
+}
